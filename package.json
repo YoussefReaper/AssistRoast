@@ -1,0 +1,86 @@
+{
+  "name": "assistRoast",
+  "displayName": "Assist Roast Linter",
+  "description": "A playful linter that roasts your code into better shape.",
+  "version": "0.0.1",
+  "publisher": "your-id-here",
+  "engines": {
+    "vscode": "^1.90.0"
+  },
+  "categories": ["Linters"],
+  "main": "./out/extension.js",
+  "activationEvents": [
+    "onLanguage:javascript",
+    "onLanguage:typescript",
+    "onLanguage:python"
+  ],
+  "contributes": {
+    "commands": [
+      {
+        "command": "assistRoast.toggleEnable",
+        "title": "Assist Roast: Toggle Enable"
+      },
+      {
+        "command": "assistRoast.resetMode",
+        "title": "Assist Roast: Reset Roast Mode"
+      },
+      {
+        "command": "assistRoast.runNow",
+        "title": "Assist Roast: Run Analysis Now"
+      }
+    ],
+    "configuration": {
+      "title": "Assist Roast Linter",
+      "properties": {
+        "assistRoast.enabled": {
+          "type": "boolean",
+          "default": true,
+          "description": "Enable or disable Assist Roast diagnostics."
+        },
+        "assistRoast.debounceMs": {
+          "type": "number",
+          "default": 900,
+          "description": "Delay (in ms) before re-running analysis after typing."
+        },
+        "assistRoast.maxLineLength": {
+          "type": "number",
+          "default": 120,
+          "description": "Line length threshold for long-line warnings."
+        },
+        "assistRoast.mode": {
+          "type": "string",
+          "enum": ["gentle", "annoying", "savage"],
+          "default": "annoying",
+          "description": "Roast intensity."
+        },
+        "assistRoast.onSaveOnly": {
+          "type": "boolean",
+          "default": false,
+          "description": "Only run the analyzer when saving the file."
+        },
+        "assistRoast.popupOnNew": {
+          "type": "boolean",
+          "default": true,
+          "description": "Show popup notifications when new roasts appear."
+        },
+        "assistRoast.statsEnabled": {
+          "type": "boolean",
+          "default": true,
+          "description": "Show total roasts in the status bar."
+        }
+      }
+    }
+  },
+  "scripts": {
+    "vscode:prepublish": "npm run compile",
+    "compile": "tsc -p ./"
+  },
+  "devDependencies": {
+    "typescript": "^5.3.3",
+    "@types/vscode": "^1.90.0",
+    "@types/node": "^20.0.0"
+  },
+  "dependencies": {
+    "play-sound": "^1.1.6"
+  }
+}
