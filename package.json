@@ -7,7 +7,9 @@
   "engines": {
     "vscode": "^1.90.0"
   },
-  "categories": ["Linters"],
+  "categories": [
+    "Linters"
+  ],
   "main": "./out/extension.js",
   "activationEvents": [
     "onLanguage:javascript",
@@ -49,7 +51,11 @@
         },
         "assistRoast.mode": {
           "type": "string",
-          "enum": ["gentle", "annoying", "savage"],
+          "enum": [
+            "gentle",
+            "annoying",
+            "savage"
+          ],
           "default": "annoying",
           "description": "Roast intensity."
         },
@@ -76,9 +82,10 @@
     "compile": "tsc -p ./"
   },
   "devDependencies": {
-    "typescript": "^5.3.3",
+    "@types/mocha": "^10.0.10",
+    "@types/node": "^20.0.0",
     "@types/vscode": "^1.90.0",
-    "@types/node": "^20.0.0"
+    "typescript": "^5.3.3"
   },
   "dependencies": {
     "play-sound": "^1.1.6"
