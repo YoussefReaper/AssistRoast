@@ -3,20 +3,30 @@ This is a visual studio code extension to help fixes bad coding habits by roasti
 
 ## Get it work
 Download the release.
+
 Open the folder in visual studio code.
+
 Go to src/extension.ts.
+
 Press F5.
+
 Enjoy.
 
 ## Features
 --Total roasts bar counter.
+
 --35 Roast rules.
+
 --Tip with every roast to actually code better.
+
 --The most common issues are within the extension.
+
 --Variety in rules (Performance, Safety, Syntax and etc.).
+
 --3 Different Modes (gentle, annoying, savage).
 ## Example for every rule kind
 Below are small taste-test examples of the kinds of roasts Assist Roast Linter will throw at you.  
+
 Each rule also includes a practical tip so it’s not just emotional damage for nothing.
 ### Syntax
 
