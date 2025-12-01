@@ -1,6 +1,13 @@
 # Assist Roast Linter
 This is a visual studio code extension to help fixes bad coding habits by roasting your code into shape, a self-aware linter that teaches cleaner, more expressive code through sarcasm, wit, and a touch of emotional damage (the motivational kind). It's like "write cleaner code or get flamed trying"
 
+## Get it work
+Download the release.
+Open the folder in visual studio code.
+Go to src/extension.ts.
+Press F5.
+Enjoy.
+
 ## Features
 --Total roasts bar counter.
 --35 Roast rules.
